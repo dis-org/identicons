@@ -8,5 +8,5 @@ retrieves original github identicons and adapts them to fit "in-a-circle" layout
 ## usage
 
 ```
-$ make <github username>.png
+$ make <github username>
 ```

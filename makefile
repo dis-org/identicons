@@ -1,13 +1,19 @@
-.DELETE_ON_ERROR:
+.REMOVE_ON_ERROR:
+.SECONDARY:
 
 clean:
 	rm -f *.png*
 
-%.png:
-	wget https://github.com/identicons/$*.png
-	gm convert $*.png -background transparent \
-                     -compose copy -gravity center \
-                     -extent 512x512 \
-                     -transparent "#F0F0F0" \
-                     $*_no_back.png
+% : %.png | done
+	@:
 
+%.png :
+	wget https://github.com/identicons/$*.png
+	./convert.sh $* transparent no_back
+	./convert.sh $* "#F0F0F0" light
+	./convert.sh $* "#2E3436" dark
+	./convert.sh $* "#FFFFFF" white
+	./convert.sh $* "#000000" black
+
+done:
+	@echo "all done!"
