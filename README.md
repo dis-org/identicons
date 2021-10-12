@@ -2,6 +2,7 @@
 retrieves original github identicons and adapts them to fit "in-a-circle" layouts
 
 ## dependencies
+- [make](https://www.gnu.org/software/make/)
 - [wget](https://www.gnu.org/software/wget/)
 - [gm](http://www.graphicsmagick.org) (GraphicsMagick)  [[docs](http://www.graphicsmagick.org/GraphicsMagick.html)]
 
@@ -10,3 +11,7 @@ retrieves original github identicons and adapts them to fit "in-a-circle" layout
 ```
 $ make <github username>
 ```
+
+#### to users `all` and `clean`:
+
+just add `.pdf` and everything will work, but you should still feel bad
