@@ -14,4 +14,4 @@ $ make <github username>
 
 #### to users `all` and `clean`:
 
-just add `.pdf` and everything will work, but you should still feel bad
+just add `.png` to the username and everything will work, but you should still feel bad
